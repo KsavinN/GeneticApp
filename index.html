@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Struktury Genetyczna Populacji</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://unpkg.com/simple-statistics@7.0.8/dist/simple-statistics.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+
+
+<body>
+    <div class="container" style="padding:25px;">
+        <h1>Struktury Genetyczna Populacji</h1>
+
+
+
+        <form onsubmit="return false">
+            <div class="form-group">
+                <label id="AA">AA - Homozygota Dominująca</label>
+                <input class="form-control" type="number" value="0">
+
+            </div>
+            <div class="form-group">
+                <label id="Aa">Aa - Heterozygota</label>
+                <input type="number" class="form-control" value="0">
+
+            </div>
+            <div class="form-group">
+                <label id="aa">aa - Homozygota recesywna</label>
+                <input type="number" class="form-control" value="0">
+
+            </div>
+            <button class="btn btn-primary">Oblicz</button>
+        </form>
+
+
+        <table class="table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th scope="col">Genotyp</th>
+                    <th scope="col">Liczba Genotypów</th>
+                    <th scope="col">Frekwencja Genotypów</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="D">
+                    <th scope="row">D-AA</th>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr id="H">
+                    <th scope="row">H-Aa</th>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr id="R">
+                    <th scope="row">R-aa</th>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <ul class="list-group mt-5">
+            <li class="list-group-item list-group-item-action active">liczebnosc całkowita : <span id="total">0</span>
+            </li>
+        </ul>
+
+        <ul class="list-group mt-5">
+            <li class="list-group-item list-group-item-action active">Frekwencja Genów</li>
+            <li class="list-group-item"> p = <span id="pFreq">0</span> Geny Dominujące</li>
+            <li class="list-group-item"> q = <span id="qFreq">0</span> Geny Recesywne</li>
+        </ul>
+
+        <ul class="list-group mt-5">
+            <li class="list-group-item list-group-item-action active">Frekwencja Genotypów</li>
+            <li class="list-group-item"> AA = <span id="ExpFregAA">0</span></li>
+            <li class="list-group-item"> Aa = <span id="ExpFregAa">0</span></li>
+            <li class="list-group-item"> aa = <span id="ExpFregaa">0</span></li>
+        </ul>
+
+
+        <ul class="list-group mt-5">
+            <li class="list-group-item list-group-item-action active">Statystyka</li>
+            <li class="list-group-item"> <span id="chi"></span></li>
+            <li class="list-group-item"> <span id="resultStat"></span></li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
